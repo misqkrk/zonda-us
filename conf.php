@@ -1,6 +1,6 @@
 <?php
 //beta1
-define('VERSION', '0.8.1');
+define('VERSION', '0.9.1');
 
 define('PROJECT', 'US');
 define('DIR_PROJECT', '/var/www/us/');
