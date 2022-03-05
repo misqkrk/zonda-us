@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,100&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap");
+
+body {background: #ececec;
+  color: 212121;
+  font-size: 13px;
+font-family: 'Roboto', sans-serif;}
+
+/* body:before {
+    content: '';
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    -moz-pointer-events: none;
+    -webkit-pointer-events: none;
+    -ms-pointer-events: none;
+    pointer-events: none;
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    background-attachment: scroll;
+    background-image: url(https://5d0cdfee3617ddcb.demo.carrd.co/assets/images/bg.svg?v=7583b449);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #1A1A21;
+} */
+
+*:focus {
+  outline: none; }
+
+div {
+  box-sizing: border-box; }
+
+img {
+  max-width: 100%; }
+
+p {
+  margin: 6px 0; }
+
+a {
+  color: #ff9800;
+  text-decoration: none; }
+  a:hover {
+    color: #ff5722; }
+  a:focus {
+    color: #ff9800; }
+
+hr {border: 0; border-top: 1px solid #9e9e9e;}
+h1, h2 {border-bottom: 2px solid #f44335;}
+
+.container {
+  padding: 0 5px;
+  max-width: 990px;
+  margin: 0 auto; 
+  min-width: 760px;
+}
+
+.row {
+  display: flex;
+  overflow-y: overlay;
+  flex-wrap: wrap;
+  margin: 0 -3px; }
+
+
+
+.col {
+  padding: 3px;
+  flex: 0 0 100%; }
+  .col.col-12 {
+    flex: 0 0 100%; }
+  .col.col-6 {
+    flex: 0 0 50%; }
+  .col.col-4 {
+    flex: 0 0 33.33%; }
+  .col.col-3 {
+    flex: 0 0 25%; }
+
+.box-1 {
+  background: #fff; 
+  padding: 20px;
+  border-radius: 6px; 
+  position: relative;
+  }
+
+.button-1 {
+  display: inline-block;
+  border-radius: 3px;
+  margin: 0 3px 3px 0;
+  padding: 6px 12px;
+  color: #fff;
+  background: #3f51b5;
+}
+.button-1:hover{
+  color: #fff;
+  background: #673ab7;
+}
+
+.menu_button_r {
+    float: right;
+}
+.menu_button_l {
+    float: left;
+}
+
+.faq h3{border-bottom: 3px;}
+.faq span {
+  display: block;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 3px;
+}
+.welcome{
+  border-top-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+
+  position: absolute;
+    background: #f44336;
+    color: fff;
+    padding: 6px 12px;
+    top: 0;
+    right: 0;
+}
+input {
+  display: block;
+  padding: 6px;
+  margin-bottom: 6px;
+  width: 50%;
+  border: 1px solid #3f51b5;
+  border-radius: 3px;
+  }
+input[type="submit"]{
+  background: #3f51b5;
+  color: fff;
+  border: 0;
+}
+input[type="submit"]:hover{
+  background: #673ab7;
+
+}
+.form-1 {margin: 3px}
+.form-1 input{
+  border-radius: 2px;
+  display: inline;
+  padding: 1px;
+  margin-bottom: 0;
+  width: 100%;
+}
+
+
+.szary {color: #9c9c9c;}
+.ta-r {
+  text-align: right; }
+
+.ta-l {
+  text-align: left !important; }
+
+.ta-c {
+  text-align: center !important; }
+.notice{
+  background: #00bcd4;
+
+  padding: 12px;
+  margin: 12px 0;
+  border-radius: 6px;
+  color: #fff;
+}
+.notice.ok{
+    background: #4caf50;
+}
+.notice.error{
+    background: #f44336;
+}
+
+.reguest-report-1{
+  background: #ececec;
+  border-radius: 3px;
+  margin-bottom: 12px;
+}
+.reguest-report-1 .y{
+    background: #f44336;
+    color: #fff;
+    padding: 12px 18px;
+    display: inline-block;
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+}
+.reguest-report-1 .text{
+    padding: 12px;
+}
+.reguest-report-1 .f{
+    float: right;
+
+
+
+}
+.reguest-report-1 .f input{
+  width: 100%;
+  display: block;
+  padding: 12px 18px;
+  float: right;
+}
+
+.reguest-report-1 .f input:disabled{
+  background: #ccc;
+}
+.table-1 { border-collapse: collapse;
+width: 100%; font-size: 14px;}
+.table-1 td {padding: 1px 3px; height:10px;}
+.table-1 table, .table-1 th, .table-1 td {border: 1px solid #ececec; text-align: right;}
+
+
+.table-2 { 
+  border-collapse: collapse;
+  width: 100%; 
+  font-size: 14px;
+}
+.table-2 td {padding: 1px 3px; height:10px;}
+.table-2 table, .table-2 th, .table-2 td {border: 1px solid #ececec; text-align: right;}
+
+
