@@ -1,5 +1,5 @@
 <?
-login_logout();
+/// strona do wywalenia
 ?>
 
 

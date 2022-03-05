@@ -7,7 +7,7 @@ class Connect{
 	
 	static function redis($db = false){
 		$redis = new Redis();
-		$redis->connect('/var/run/redis/redis.sock');
+		$redis->connect('redis-1', '6379');
 		$redis->auth(REDIS_AUTH);
 		
 		if ($db):

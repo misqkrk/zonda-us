@@ -1,6 +1,5 @@
 <?
-//    header('Location: http://zonda.michalw.pl/przerwa.html');
-
+    //header('Location: http://zonda.michalw.pl/przerwa.html');
 require_once 'loader.php';
 
 
@@ -20,6 +19,25 @@ switch($_GET['switch']){
 	break;
 
 	case 'public';
+
+
+		if($_POST['username'] && $_POST['pass']): 
+			$res = $DB->fetchAll("SELECT * FROM `username` WHERE `username` = '".$_POST['username']."' ")[0];
+			if( password_verify($_POST['pass'], $res['userpass']) ):
+				$status = 'Zalogowano'.PHP_EOL;
+				$_SESSION[PROJECT]['AUTH'] = [
+					'username' => $res['username'],
+					'userID' => $res['ID'],
+					'acces' => $res['acces'],
+				];
+				header('Location: /dashboard/user/home');
+			else:
+				$status = 'Błedne dane logowania.'.PHP_EOL;
+			endif;
+		elseif($_GET['site'] == 'logout'):
+			login_logout();
+		endif;
+
 		include_once 'html/header.php';
 
 		if ( is_file('html/public/'.$site.'.php') ):
@@ -31,6 +49,7 @@ switch($_GET['switch']){
 
 	case 'user';
 		login_acces(1);
+
 		include_once 'html/header_login.php';
 
 		if ( is_file('html/user/'.$site.'.php') ):

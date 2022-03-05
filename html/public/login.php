@@ -1,27 +1,27 @@
 <?
+//print_r($_SERVER);
+// if($_POST['username'] && $_POST['pass']): 
 
-//print_r($_SERVER['SERVER_NAME']);
-if($_POST['username'] && $_POST['pass']): 
-
-	$res = $DB->fetchAll("SELECT * FROM `username` WHERE `username` = '".$_POST['username']."' ")[0];
-	if( password_verify($_POST['pass'], $res['userpass']) ):
-		$status = 'Zalogowano'.PHP_EOL;
-		$_SESSION[PROJECT]['AUTH'] = [
-			'username' => $res['username'],
-			'userID' => $res['ID'],
-			'acces' => $res['acces'],
-		];
-		//print_r($_SESSION);
-		header('Location: https://'.$_SERVER['SERVER_NAME'].'/dashboard/user/home');
+// 	$res = $DB->fetchAll("SELECT * FROM `username` WHERE `username` = '".$_POST['username']."' ")[0];
+// 	if( password_verify($_POST['pass'], $res['userpass']) ):
+// 		$status = 'Zalogowano'.PHP_EOL;
+// 		$_SESSION[PROJECT]['AUTH'] = [
+// 			'username' => $res['username'],
+// 			'userID' => $res['ID'],
+// 			'acces' => $res['acces'],
+// 		];
+// 		//print_r($_SESSION);
+// 		//header("HTTP/1.1 404 Not Found");
+// 		header('Location: https://'.$_SERVER['HTTP_HOST'].'/dashboard/user/home');
 
 		
-	else:
+// 	else:
 
-		$status = 'Błedne dane logowania.'.PHP_EOL;
-	endif;
+// 		$status = 'Błedne dane logowania.'.PHP_EOL;
+// 	endif;
 
 
-endif;
+// endif;
 
 
 

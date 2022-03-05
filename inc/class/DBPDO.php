@@ -11,7 +11,7 @@ class DBPDO {
 		$this->database = $databse;
 
 		$this->redis = new Redis(); 
-		$this->redis->connect('/var/run/redis/redis.sock');
+		$this->redis->connect('redis-1', '6379');
 		$this->redis->auth(REDIS_AUTH);
 		$this->connect();
 	}

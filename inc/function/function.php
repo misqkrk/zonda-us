@@ -728,7 +728,7 @@ function cut_zero($in, $symbol = ''){
 function login_acces($minimum_acces = 1){
 	$user = $_SESSION[PROJECT]['AUTH'];
 	if(!$user['userID'] || !$user['acces']):
-		header('Location: https://'.$_SERVER['SERVER_NAME'].'/dashboard');
+		header('Location: https://'.$_SERVER['HTTP_HOST'].'/dashboard');
 	endif;
 
 	if($user['acces'] && $user['acces'] < $minimum_acces):
@@ -748,7 +748,7 @@ function acces($minimum_acces = 1){
 
 function login_logout(){
 	unset($_SESSION[PROJECT]);
-	header('Location: https://'.$_SERVER['SERVER_NAME'].'/dashboard');
+	header('Location: /dashboard');
 }
 
 
